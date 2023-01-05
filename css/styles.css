@@ -6,6 +6,7 @@
   --white-color: #fff;
   --sub-color: #8e8f99;
   --success-color: #31d0aa;
+  --press-color: #404bbf;
 }
 
 /*- - - - - - -*/
@@ -52,10 +53,8 @@ button:active {
 
 /*HEADER*/
 .header {
-  margin: 0;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: var(--light-background);
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-main {
@@ -196,7 +195,8 @@ button:active {
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: #404bbf;
+  background-color: var(--press-color);
+  border-color: var(--press-color);
   color: var(--white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -210,6 +210,15 @@ button:active {
   margin-left: 24px;
 }
 
+.principle-title{
+  font-family: 'Roboto';
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+margin-bottom: 8px;
+margin-top: 0;
+}
 .principle {
   display: flex;
   padding-left: 0;
@@ -225,44 +234,29 @@ button:active {
   max-width: 264px;
 }
 
-.principle-style::before {
-  display: block;
-  content: "";
+.icons {
+  width: 100%;
   height: 112px;
-  background-color: var(--light-background);
+  margin: 0;
+  padding: 0;
   border-radius: 4px;
-  margin-bottom: 8px; /*
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));*/
+  background-color: var(--light-background);
+  margin-bottom: 8px;
 }
 
-.icon-antenna::before {
-  background-image: url(../images/icons-principle/antenna.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.icon-antenna {
+  margin: 24px 100px;
 }
-.icon-clock::before {
-  background-image: url(../images/icons-principle/clock.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.icon-astronaut {
+  margin: 24px 100px;
 }
-.icon-diagram::before {
-  background-image: url(../images/icons-principle/diagram\ .svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.icon-clock {
+  margin: 24px 100px;
 }
-.icon-astronaut::before {
-  background-image: url(../images/icons-principle/astronaut.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+.icon-diagram {
+  margin: 24px 100px;
 }
 
-.principle-title {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--dark-color);
-  margin-top: 0;
-}
 
 .text {
   margin-top: 0;
@@ -299,7 +293,6 @@ button:active {
 
 /*SECTION 3/1*/
 .team-style {
-  /* padding: 120px 0;*/
   background-color: var(--light-background);
 }
 
@@ -315,7 +308,7 @@ button:active {
 }
 
 .team-title {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   color: var(--dark-color);
@@ -356,29 +349,25 @@ button:active {
   display: flex;
   padding: 0;
   justify-content: center;
-  gap: 24px;
-  margin: 0 auto;
+  margin: 0 ;
   margin-bottom: 36px;
 }
 
-.soc-link {
-  width: 40px;
-  height: 40px;
+.soc-list .soc-link + .soc-link{
+margin-left: 24px;
 }
 
 .soc-link-logo {
-  display: block;
-  width: 100%;
-  height: 100%;
+  padding: 12px;
   border-radius: 50%;
-  background-color: var(--sub-color);
+  background-color: var(--active-color);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .soc-link-logo:focus,
 .soc-link-logo:hover {
-  background-color: var(--active-color);
+  background-color: var(--press-color);
 }
 
 .customers {
@@ -406,9 +395,8 @@ button:active {
   padding-left: 0;
 }
 
-.clients-link {
-  width: 168px;
-  height: 88px;
+.clients-logo {
+  padding: 16px 32px;
   border: 1px solid var(--sub-color);
   border-radius: 4px;
   display: flex;
@@ -416,8 +404,8 @@ button:active {
   justify-content: center;
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients-logo:hover,
+.clients-logo:focus {
   border-color: var(--active-color);
 }
 
@@ -451,10 +439,7 @@ button:active {
   justify-content: center;
   gap: 24px;
 }
-/*
-.main-button .btn-item + .btn-item {
-  margin-left: 24px;
-}*/
+
 
 .btn {
   font-weight: 500;
@@ -483,12 +468,13 @@ button:active {
   margin-right: 24px;
   margin-bottom: 48px;
   background-color: var(--white-color);
-  border: 0.5px solid var(--light-background);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .cards:hover,
 .cards:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .cards:nth-child(3n) {
@@ -512,6 +498,7 @@ button:active {
   margin: 0;
   margin-top: 8px;
   text-decoration: none;
+  color: var(--body-text);
 }
 
 .card-description {
@@ -554,13 +541,17 @@ button:active {
 
 .text-footer {
   color: var(--white-color);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   max-width: 264px;
   margin-top: 16px;
   margin-bottom: 0;
 }
-.footer-item {
-  margin-right: 120px;
-}
+
 .footer-soc-link-logo {
   display: block;
   width: 100%;
@@ -570,12 +561,24 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8px;
 }
+
 .footer-soc-link-logo:hover,
 .footer-soc-link-logo:focus {
   background-color: var(--success-color);
 }
 
+.footer-soc-link {
+  margin-left: 120px;
+}
+
+.soc-list-footer {
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+}
 .soc-item {
   font-family: "Roboto";
   font-style: normal;
